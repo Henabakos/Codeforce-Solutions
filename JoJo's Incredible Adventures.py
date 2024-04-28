@@ -1,9 +1,3 @@
-t = int(input())
-
-test_cases = []
-for _ in range(t):
-    s = input().strip()
-    test_cases.append(s)
 
 results = []
 
