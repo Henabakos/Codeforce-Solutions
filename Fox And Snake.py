@@ -3,6 +3,7 @@ a=[]
 for i in range(51):
     if i%2!=0:
         a.append(i)
+        
 for i in range(row):
     a1=""
     if i%2==0:
