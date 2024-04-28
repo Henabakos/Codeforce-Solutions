@@ -1,19 +1,28 @@
-for _  in range(int(input())):
-    li,t=input().split()
+from collections import defaultdict
+for _ in range(int(input())):
+    li=list(input().split())
     s=input()
-    a=s[::-1]
-    cnt=0
-    for i in range(len(a)):
-        if a[i]==t:
-            ind=i
-            break
     s+=s
-    dif=len(a)-ind-1
-    for i in range(dif,len(s)):
-        if s[i]!="g":
-            cnt+=1
+    i,j=0,1
+    n=len(s)
+    _max=0
+    if li[1] == "g":
+        print(0)
+        continue
+    
+    for _ in range(n):
+        if s[i]==li[1]:
+            # print(i,j,s[i])
+            if s[j]=="g":
+               _max=max(_max,j-i)
+               i=j
+            else:
+                j+=1
         else:
-            break
-    print(cnt)
-            
+            i+=1
+            j+=1
+    print(_max)
+
+
+
 

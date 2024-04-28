@@ -4,7 +4,7 @@ for _ in range(int(input())):
     i,j=0,n-1
     while i<=j:
         if s[i]!=s[j]:
-            i+=1
+            i+= 
             j-=1
             n-=2
         else:
